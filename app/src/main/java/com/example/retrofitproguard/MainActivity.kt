@@ -38,6 +38,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        val randomPoliticalRetrofitInterface =
+            retrofit.create(PoliticalRetrofitInterface::class.java)
+        findViewById<Button>(R.id.randomPolitics).setOnClickListener {
+            lifecycleScope.launchWhenResumed {
+                val fact = randomPoliticalRetrofitInterface.fetchData().body()
+                setJoke(fact)
+            }
+        }
+
     }
 
     private fun setJoke(fact: Fact?) {

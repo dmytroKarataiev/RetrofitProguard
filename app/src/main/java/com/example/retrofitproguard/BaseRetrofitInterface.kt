@@ -22,3 +22,10 @@ interface AnimalRetrofitInterface: BaseRetrofitInterface {
     override suspend fun fetchData(): Response<Fact>
 
 }
+
+interface PoliticalRetrofitInterface {
+
+    @GET("jokes/random?category=political")
+    suspend fun fetchData(): Response<Fact>
+
+}

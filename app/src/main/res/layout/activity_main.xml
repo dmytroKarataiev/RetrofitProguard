@@ -35,4 +35,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/random"/>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/randomPolitics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Random Politics Joke"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/randomAnimal"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
